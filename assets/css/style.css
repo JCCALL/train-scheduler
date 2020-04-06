@@ -1,0 +1,14 @@
+.jumbotron {
+    background-color: goldenrod;
+}
+
+.current {
+    background-color: #be0000;
+    padding: 3vh 0vw;
+    
+}
+
+.button {
+    background-color: #be0000;
+    font-weight: strong;
+}
