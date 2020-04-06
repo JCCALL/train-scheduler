@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Train Scheduler</title>
     <link rel="shorcut icon" href="assets/images/train1.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <!--<link rel="stylesheet" href="assets/css/reset.css">-->
     <link rel="stylesheet" href="assets/css/style.css">
     
 </head>
@@ -13,7 +13,7 @@
     <div class="container">
         <!--header-->
         <h1>Train Depot</h1>
-
+    
         <!--scheduling table-->
         <div>
             <h3>Current Train Schedule</h3>
@@ -25,12 +25,30 @@
                     <th>Next Arrival</th>
                     <th>Minutes Away</th>
                 </tr>
-            </table>
+            
+            </table>    
         </div>
         <!--form to add new trains-->
         <div>
             <form>
-                
+                <!--TrainName, Destination, First Train Time (HH:mm - military time) Frequency (min) submit button-->
+                <label for="tname">Train Name:</label>
+                <br>
+                <input type="text" id="tName">
+                <br>
+                <label for="dest">Destination:</label>
+                <br>
+                <input type="text" id="destination">
+                <br>
+                <label for="time">First Train Time (HH:mm - military time):</label>
+                <br>
+                <input type="text" id="fTime">
+                <br>
+                <label for="frequency">Frequency (min):</label>
+                <br>
+                <input type="text" id="frequency">
+                <br>
+                <input type="submit" value="Submit">
             </form>
         </div>
     </div>
