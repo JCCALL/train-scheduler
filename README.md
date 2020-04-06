@@ -1,2 +1,2 @@
-# train-scheduler
+# Train Scheduler
 Train Scheduler
