@@ -18,6 +18,6 @@
     border: solid 1px #be0000;
 }
 
-#tName, #destination, #fTime, #frequency {
+#tname, #destination, #ftime, #frequency {
     width: 100%;
 }
