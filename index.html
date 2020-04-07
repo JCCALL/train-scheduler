@@ -14,7 +14,7 @@
     <div class="container">
         <!--header-->
         <div class="row">
-            <div class="col jumbotron ">
+            <div class="col-md-12 jumbotron ">
                 <h1 class="head text-center">Train Depot</h1>
                 <img id="redtrain" src="assets/images/redtrain.png" width="200px" >
             </div>
@@ -22,9 +22,11 @@
       
         
         <!--scheduling table-->
-        <div class="row">
-            <div class="col">
-                <h4 class="current text-light">Current Train Schedule</h4>
+        <div class="schedule row">
+            <div class="tschedule col-md-12">
+                <h4 class="train text-light">Current Train Schedule</h4>
+            </div>
+            <div class="col-md-12">    
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -41,32 +43,34 @@
                 </table>
             </div>
         </div>
+        <br>
         <!--form to add new trains-->
-        <div class="row">   
-            <div class="col">
-                <h4>Add Train</h4>
-                
+        <div class="addt row">   
+            <div class="atrain col-md-12">
+                <h4 class="train text-light">Add Train</h4>
+            </div>
+            <div class="col-md-12">   
                 <form>
                     <div class="form-group">
                     <!--TrainName, Destination, First Train Time (HH:mm - military time) Frequency (min) submit button-->
                         <label for="tname">Train Name:</label>
                         <br>
-                        <input type="text" id="tName">
+                        <input type="text" id="tName" required>
                     </div>
                     <div class="form-group">
                         <label for="dest">Destination:</label>
                         <br>
-                        <input type="text" id="destination">
+                        <input type="text" id="destination" required>
                     </div>
                     <div class="form-group">
                         <label for="time">First Train Time (HH:mm - military time):</label>
                         <br>
-                        <input type="text" id="fTime" pattern= "[0-9] {2}: [0-9] {2}">
+                        <input type="text" id="fTime"  required>
                     </div>
                     <div class="form-group">
                         <label for="frequency">Frequency (min):</label>
                         <br>
-                        <input type="text" id="frequency">
+                        <input type="text" id="frequency" required>
                     </div>
                     <button type="submit" class="button btn btn-lg btn-outline-dark">Submit</button>
 

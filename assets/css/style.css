@@ -2,7 +2,7 @@
     background-color: goldenrod;
 }
 
-.current {
+.train, .atrain, .tschedule {
     background-color: #be0000;
     padding: 3vh 0vw;
     
@@ -11,4 +11,13 @@
 .button {
     background-color: #be0000;
     font-weight: strong;
+    margin-bottom: 1.5vh;
+}
+
+.atrain, .tschedule, .addt, .schedule {
+    border: solid 1px #be0000;
+}
+
+#tName, #destination, #fTime, #frequency {
+    width: 100%;
 }
