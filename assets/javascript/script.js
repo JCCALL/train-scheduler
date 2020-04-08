@@ -31,4 +31,20 @@ var firebaseConfig = {
     console.log(destination);
     console.log(firstTrain);
     console.log(frequency);
+
+    /*database.ref().push({
+      trainName: trainName,
+      destination: destination,
+      firstTrain: firstTrain,
+      frequency: frequency
+    });*/
+
+    var newRow = $("<tr>");
+    var newTrain = $("<td>").html(trainName);
+    var newDest = $("<td>").html(destination);
+    var newFreq = $("<td>").html(frequency);
+    
+    newRow.append(newTrain, newDest, newFreq);
+    $("#tbody").prepend(newRow);
+
   })
