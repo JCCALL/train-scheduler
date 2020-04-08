@@ -1,50 +1,49 @@
-
-  // Your web app's Firebase configuration
+// Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyBTMDOPn3ku44SC5YWvyD7QbxQ-xz-l9ZE",
-    authDomain: "train-schedule-9point75.firebaseapp.com",
-    databaseURL: "https://train-schedule-9point75.firebaseio.com",
-    projectId: "train-schedule-9point75",
-    storageBucket: "train-schedule-9point75.appspot.com",
-    messagingSenderId: "891863033066",
-    appId: "1:891863033066:web:7c93c9124580183be72393"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  apiKey: "AIzaSyD0GyAfH-u5LykV4W1570jRiGjceSJQSI0",
+  authDomain: "trainschedule-2df57.firebaseapp.com",
+  databaseURL: "https://trainschedule-2df57.firebaseio.com",
+  projectId: "trainschedule-2df57",
+  storageBucket: "trainschedule-2df57.appspot.com",
+  messagingSenderId: "917403516441",
+  appId: "1:917403516441:web:e8c3b2808d1b554aebb488"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-  //var database = firebase.database();
+var database = firebase.database();
 
-  var trainName = "";
-  var destination = "";
-  var firstTrain = "";
-  var frequency = 0;
+var trainName = "";
+var destination = "";
+var firstTrain = "";
+var frequency = 0;
 
-  $("#submit").on("click", function(event) {
-    event.preventDefault();
+$("#submit").on("click", function (event) {
+  event.preventDefault();
 
-    trainName = $("#tname").val();
-    destination = $("#destination").val();
-    firstTrain = $("#ftime").val();
-    frequency = $("#frequency").val();
-    
-    console.log(trainName);
-    console.log(destination);
-    console.log(firstTrain);
-    console.log(frequency);
+  trainName = $("#tname").val();
+  destination = $("#destination").val();
+  firstTrain = $("#ftime").val();
+  frequency = $("#frequency").val();
 
-    /*database.ref().push({
-      trainName: trainName,
-      destination: destination,
-      firstTrain: firstTrain,
-      frequency: frequency
-    });*/
+  console.log(trainName);
+  console.log(destination);
+  console.log(firstTrain);
+  console.log(frequency);
 
-    var newRow = $("<tr>");
-    var newTrain = $("<td>").html(trainName);
-    var newDest = $("<td>").html(destination);
-    var newFreq = $("<td>").html(frequency);
-    
-    newRow.append(newTrain, newDest, newFreq);
-    $("#tbody").prepend(newRow);
+  database.ref().push({
+    trainName: trainName,
+    destination: destination,
+    firstTrain: firstTrain,
+    frequency: frequency
+  });
 
-  })
+  var newRow = $("<tr>");
+  var newTrain = $("<td>").html(trainName);
+  var newDest = $("<td>").html(destination);
+  var newFreq = $("<td>").html(frequency);
+
+  newRow.append(newTrain, newDest, newFreq);
+  $("#tbody").prepend(newRow);
+
+})

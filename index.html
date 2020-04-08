@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Train Scheduler</title>
-    <link rel="shorcut icon" href="assets/images/train1.png" type="image/x-icon"/>
-    
-    <!--jquery/bootstrap jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="shorcut icon" href="assets/images/train1.png" type="image/x-icon" />
+
+
     <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!--firebase and moment.js-->
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    
-    
+
 </head>
+
 <body>
     <div class="container">
         <!--header-->
         <div class="row">
             <div class="col-md-12 jumbotron ">
                 <h1 class="head text-center">Train Depot</h1>
-                <img id="redtrain" src="assets/images/redtrain.png" width="200px" >
+                <img id="redtrain" src="assets/images/redtrain.png" width="200px">
             </div>
         </div>
-      
-        
+
+
         <!--scheduling table-->
         <div class="schedule row">
             <div class="tschedule col-md-12">
                 <h4 class="train text-light">Current Train Schedule</h4>
             </div>
-            <div class="col-md-12">    
+            <div class="col-md-12">
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -54,14 +50,14 @@
         </div>
         <br>
         <!--form to add new trains-->
-        <div class="addt row">   
+        <div class="addt row">
             <div class="atrain col-md-12">
                 <h4 class="train text-light">Add Train</h4>
             </div>
-            <div class="col-md-12">   
+            <div class="col-md-12">
                 <form>
                     <div class="form-group">
-                    <!--TrainName, Destination, First Train Time (HH:mm - military time) Frequency (min) submit button-->
+                        <!--TrainName, Destination, First Train Time (HH:mm - military time) Frequency (min) submit button-->
                         <label for="tname">Train Name:</label>
                         <br>
                         <input type="text" id="tname" required>
@@ -74,7 +70,7 @@
                     <div class="form-group">
                         <label for="time">First Train Time (HH:mm - military time):</label>
                         <br>
-                        <input type="text" id="ftime"  required>
+                        <input type="text" id="ftime" required>
                     </div>
                     <div class="form-group">
                         <label for="frequency">Frequency (min):</label>
@@ -87,7 +83,16 @@
             </div>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!--firebase and moment.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!--javascript file-->
     <script type="text/javascript" src="assets/javascript/script.js"></script>
 </body>
+
 </html>
