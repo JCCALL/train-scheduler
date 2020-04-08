@@ -18,6 +18,12 @@ var destination = "";
 var firstTrain = "";
 var frequency = 0;
 
+function currentTime() {
+  var current = moment().format('LT');
+  $("#currentTime").html(current);
+  setTimeout(currentTime, 1000);
+}
+
 $("#submit").on("click", function (event) {
   event.preventDefault();
 
@@ -47,3 +53,5 @@ $("#submit").on("click", function (event) {
   $("#tbody").prepend(newRow);
 
 })
+
+currentTime()

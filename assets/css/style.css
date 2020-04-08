@@ -1,11 +1,31 @@
+@font-face {
+    font-family: railroad;
+    src: url(../font/RR_ROMAN.TTF);
+}
 .jumbotron {
     background-color: goldenrod;
+
 }
 
+h1 {
+    font-size: 4vw;
+    font-family: railroad;
+}
+
+#currentTime {
+    font-size: 2vw;
+    font-family: railroad;
+}
 .train, .atrain, .tschedule {
     background-color: #be0000;
     padding: 3vh 0vw;
     
+}
+
+.train{
+    font-family: railroad;
+    margin-left: 2vw;
+    letter-spacing: 2px;
 }
 
 .button {
@@ -20,4 +40,18 @@
 
 #tname, #destination, #ftime, #frequency {
     width: 100%;
+}
+
+#currentTime {
+    vertical-align: bottom;
+}
+
+#rtrain {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    float: right;
+}
+
+#redtrain {
+    float: left;
 }
