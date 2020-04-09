@@ -61,9 +61,9 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log(key);
 
   var newRow = $("<tr>");
-  var newTrain = $("<td>").html(trainName);
-  var newDest = $("<td>").html(destination);
-  var newFreq = $("<td>").html(frequency);
+  var newTrain = $("<td>" + childSnapshot.val()trainName + "</td>");
+  var newDest = $("<td>" + childSnapshot.val()destination + "</td>");
+  var newFreq = $("<td>"+ childSnapshot.val()frequency + "</td>";
 
   newRow.append(newTrain, newDest, newFreq);
   $("#tbody").prepend(newRow);
