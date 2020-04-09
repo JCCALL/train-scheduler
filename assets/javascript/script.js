@@ -44,6 +44,22 @@ $("#submit").on("click", function (event) {
     frequency: frequency
   });
 
+})
+
+database.ref().on("child_added", function(childSnapshot) {
+  var startTimeConverted = moment(childSnapshot.val().firstTrain, "hh:mm").subtract(1, "years");
+  console.log(startTimeConverted);
+  var diffTime = moment().diff(moment(startTimeConverted), "minutes");
+  console.log(diffTime);
+  var timeRemaining = diffTime % childSnapshot.val().frequency;
+  console.log(timeRemaining);
+  var minutesArrival = childSnapshot.val().frequency - timeRemaining;
+  console.log(minutesArrival);
+  var nextTrain = moment().add(minutesArrival, "minutes");
+  console.log(nextTrain);
+  var key = childSnapshot.key;
+  console.log(key);
+
   var newRow = $("<tr>");
   var newTrain = $("<td>").html(trainName);
   var newDest = $("<td>").html(destination);
