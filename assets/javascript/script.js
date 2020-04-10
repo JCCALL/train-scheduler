@@ -61,13 +61,19 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log(key);
 
   var newRow = $("<tr>");
-  var newTrain = $("<td>" + childSnapshot.val()trainName + "</td>");
-  var newDest = $("<td>" + childSnapshot.val()destination + "</td>");
-  var newFreq = $("<td>"+ childSnapshot.val()frequency + "</td>";
+  var newTrain = $("<td>" + childSnapshot.val().trainName + "</td>");
+  var newDest = $("<td>" + childSnapshot.val().destination + "</td>");
+  var newFreq = $("<td class='text-center'>"+ childSnapshot.val().frequency + "</td>");
+  var newNext = $("<td class='text-center'>"+ moment(nextTrain).format("LT") + "</td>");
+  var minutes = $("<td class='text-center' id='waiting'>" + minutesArrival + "</td>");
 
-  newRow.append(newTrain, newDest, newFreq);
+  newRow.append(newTrain, newDest, newFreq, newNext, minutes);
   $("#tbody").prepend(newRow);
 
+  if (minutesArrival <= 5) {
+      $("#waiting").css({"color": "red", "font-weight": "strong"});
+      $("td").css("font-weight", "strong");
+  }
 })
 
 currentTime()

@@ -6,7 +6,9 @@
     background-color: goldenrod;
 
 }
-
+body {
+    background-color: lightslategray;
+}
 h1 {
     font-size: 4vw;
     font-family: railroad;
@@ -54,4 +56,14 @@ h1 {
 
 #redtrain {
     float: left;
+}
+
+#table {
+    background-color: floralwhite;
+    font-size: 1.2vw;
+}
+
+#form {
+    background-color: floralwhite;
+    font-size: 1.2vw;
 }
