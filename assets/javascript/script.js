@@ -1,3 +1,4 @@
+//window.onload = autoRefresh;
 // Your web app's Firebase configuration
 var firebaseConfig = {
   apiKey: "AIzaSyD0GyAfH-u5LykV4W1570jRiGjceSJQSI0",
@@ -75,8 +76,17 @@ database.ref().on("child_added", function(childSnapshot) {
 
   if (minutesArrival <= 5) {
       $("#waiting").css({"color": "red", "font-weight": "strong"});
-      $("td").css("font-weight", "strong");
+  }
+  if (minutesArrival === 1){
+    $("#waiting").html("Arriving");
   }
 })
 
+/*function autoRefresh() {
+  setInterval("timeRefresh()", 60000);
+}
+
+function timeRefresh() {
+  $("#waiting").load(location.href + ' #waiting');
+}*/
 currentTime()
