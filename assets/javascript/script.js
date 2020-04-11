@@ -17,6 +17,7 @@ var trainName = "";
 var destination = "";
 var firstTrain = "";
 var frequency = 0;
+var audio = document.getElementById("myAudio");
 
 function currentTime() {
   var current = moment().format('LT');
@@ -36,6 +37,7 @@ $("#submit").on("click", function (event) {
   console.log(destination);
   console.log(firstTrain);
   console.log(frequency);
+  audio.play();
 
   database.ref().push({
     trainName: trainName,
@@ -44,6 +46,7 @@ $("#submit").on("click", function (event) {
     frequency: frequency
   });
 
+  
 })
 
 database.ref().on("child_added", function(childSnapshot) {
